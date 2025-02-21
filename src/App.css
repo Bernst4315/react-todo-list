@@ -1,0 +1,11 @@
+.task-list{
+  
+}
+
+.task-item{
+  display: flex;
+}
+
+p, button, .checkbox {
+  margin: 5px;
+}
