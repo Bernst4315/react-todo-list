@@ -5,11 +5,16 @@ import TaskItem from './components/TaskItem'
 
 function App() {
   
+  function handleClick(e){
+    e.preventDefault()
+    console.log(e.target.taskInput.value)
+    console.log("click")
+}
 
   return (
     <div>
       <h1>Todo List</h1>
-      <AddTask />
+      <AddTask handleClick={(e) => handleClick(e)}/>
       <TaskItem />
 
         <form action="" className='edit-task'>

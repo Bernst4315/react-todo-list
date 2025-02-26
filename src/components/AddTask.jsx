@@ -1,9 +1,12 @@
-export default function AddTask(){
+
+
+export default function AddTask({handleClick}){
     
+
     return (
-        <form action="" className='add-task'>
-            <input type="text" />
-            <button>Add</button>
+        <form onSubmit={handleClick} className='add-task'>
+            <input type="text" name="taskInput" />
+            <input type="submit" value="add" />
         </form>  
     )
 }

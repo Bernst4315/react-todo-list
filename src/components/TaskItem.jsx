@@ -1,10 +1,12 @@
 import { useReducer } from "react"
 
-
+function reducer (state, action){
+    
+}
 
 export default function TaskItem(){
 
-    const [task, dispatch] = useReducer(reducer, 0);
+    const [task, dispatch] = useReducer(reducer, "");
 
     function reducer(state, action){
         
