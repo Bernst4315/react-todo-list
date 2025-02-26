@@ -6,7 +6,7 @@ import TaskItem from './components/TaskItem'
 function reducer(state, action){
   switch(action.type){
     case "add":
-      return state; 
+      return action.payload; 
   }
 }
 
@@ -18,6 +18,10 @@ function App() {
   function handleClick(e){
     e.preventDefault()
     const task = taskInput.current.value;
+
+    if(task){
+      dispatch({type: "add", payload: task})
+    }
     console.log(task)
     console.log("click")
 }
