@@ -1,23 +1,30 @@
-import { useReducer } from "react"
+import { useReducer } from "react";
 
-function reducer (state, action){
+function reducer(state, action) {}
 
-}
+export default function TaskItem({ task }) {
+  //const [task, dispatch] = useReducer(reducer, "");
 
-export default function TaskItem({task}){
+  // function reducer(state, action){
 
-    //const [task, dispatch] = useReducer(reducer, "");
+  // }
+console.log(task[0])
+console.log(typeof task)
 
-    // function reducer(state, action){
-        
-    // }
+  return (
+//task.map((task) => {
 
-    return (
-        <div className='task-item'>
-            <input type="checkbox" className='checkbox'/>
-            <p>{task}</p>
-            <button>Edit</button>
-            <button>Delete</button>
+        <div className="task-item">
+          <input type="checkbox" className="checkbox" />
+          <p>{task}</p>
+          <button>Edit</button>
+          <button>Delete</button>
         </div>
-    )
+      
+
+
+
+//})
+    
+  );
 }

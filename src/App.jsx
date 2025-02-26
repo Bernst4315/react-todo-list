@@ -12,18 +12,16 @@ function reducer(state, action){
 
 function App() {
 
-  const [task, dispatch] = useReducer(reducer, "hello")
+  const [task, dispatch] = useReducer(reducer, [])
   const taskInput = useRef(); 
   
   function handleClick(e){
     e.preventDefault()
-    const task = taskInput.current.value;
+    const task = [taskInput.current.value];
 
     if(task){
       dispatch({type: "add", payload: task})
     }
-    console.log(task)
-    console.log("click")
 }
 
   return (
