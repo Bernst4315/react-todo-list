@@ -1,21 +1,21 @@
 import { useReducer } from "react"
 
 function reducer (state, action){
-    
+
 }
 
-export default function TaskItem(){
+export default function TaskItem({task}){
 
-    const [task, dispatch] = useReducer(reducer, "");
+    //const [task, dispatch] = useReducer(reducer, "");
 
-    function reducer(state, action){
+    // function reducer(state, action){
         
-    }
+    // }
 
     return (
         <div className='task-item'>
             <input type="checkbox" className='checkbox'/>
-            <p>Todo task</p>
+            <p>{task}</p>
             <button>Edit</button>
             <button>Delete</button>
         </div>
